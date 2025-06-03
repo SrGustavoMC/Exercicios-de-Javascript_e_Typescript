@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Exercício 13 - Cronômetro</title>
+</head>
+<body>
+  <h2>Cronômetro</h2>
+  <button onclick="iniciarCronometro()">Iniciar</button>
+  <p id="tempo">0 segundo(s)</p>
+
+  <script>
+    let contador = 0;
+    let intervalo;
+
+    function iniciarCronometro() {
+      if (intervalo) clearInterval(intervalo);
+      contador = 0;
+      intervalo = setInterval(() => {
+        contador++;
+        document.getElementById('tempo').textContent = `${contador} segundo(s)`;
+      }, 1000);
+    }
+  </script>
+  <br>
+<section>
+  <button><a href="/index1.html">Exercício 1</a></button>
+  <button><a href="/index2.html">Exercício 2</a></button>
+  <button><a href="/index3.html">Exercício 3</a></button>
+  <button><a href="/index4.html">Exercício 4</a></button>
+  <button><a href="/index5.html">Exercício 5</a></button>
+  <button><a href="/index6.html">Exercício 6</a></button>
+  <button><a href="/index7.html">Exercício 7</a></button>
+  <button><a href="/index8.html">Exercício 8</a></button>
+  <button><a href="/index9.html">Exercício 9</a></button>
+  <button><a href="/index10.html">Exercício 10</a></button>
+  <button><a href="/index11.html">Exercício 11</a></button>
+  <button><a href="/index12.html">Exercício 12</a></button>
+</section>
+
+</body>
+</html>

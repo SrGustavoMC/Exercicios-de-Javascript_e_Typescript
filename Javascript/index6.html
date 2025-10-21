@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Exercício 7 - Fibonacci</title>
+</head>
+<body>
+  <h2>Sequência de Fibonacci</h2>
+  <input type="number" id="quantidade" placeholder="Quantidade de termos">
+  <button onclick="gerarFibonacci()">Gerar Sequência</button>
+  <p id="resultado"></p>
+
+  <script>
+    function gerarFibonacci() {
+      const n = parseInt(document.getElementById('quantidade').value);
+      if (n <= 0) return;
+      let sequencia = [0, 1];
+      for (let i = 2; i < n; i++) {
+        sequencia[i] = sequencia[i - 1] + sequencia[i - 2];
+      }
+      document.getElementById('resultado').textContent = `Fibonacci: ${sequencia.slice(0, n).join(', ')}`;
+    }
+  </script>
+  <br>
+<section>
+  <button><a href="index.html">Exercício 1</a></button>
+  <button><a href="index1.html">Exercício 2</a></button>
+  <button><a href="index2.html">Exercício 3</a></button>
+  <button><a href="index3.html">Exercício 4</a></button>
+  <button><a href="index4.html">Exercício 5</a></button>
+  <button><a href="index5.html">Exercício 6</a></button>
+  <button><a href="index6.html">Exercício 7</a></button>
+  <button><a href="index7.html">Exercício 8</a></button>
+  <button><a href="index8.html">Exercício 9</a></button>
+  <button><a href="index9.html">Exercício 10</a></button>
+  <button><a href="index10.html">Exercício 11</a></button>
+  <button><a href="index11.html">Exercício 12</a></button>
+  <button><a href="index12.html">Exercício 13</a></button>
+</section>
+
+
+</body>
+</html>
